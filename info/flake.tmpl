@@ -1,0 +1,32 @@
+# info/flake.tmpl
+{
+  description = "auto_flake application";
+    
+  inputs = {
+    # Default package source
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # <<NIX_AUTO_INPUTS_START>>
+    # Custom sources (e.g., local paths or external git repos) will be injected here
+    # <<NIX_AUTO_INPUTS_END>>
+  };
+
+  outputs = { self, nixpkgs, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
+    {
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          # <<NIX_AUTO_GEN_START>>
+          # Package list will be injected here
+          # <<NIX_AUTO_GEN_END>>
+        ];
+
+        shellHook = ''
+          echo "❄️ Welcome to your custom Nix environment!"
+        '';
+      };
+    };
+}

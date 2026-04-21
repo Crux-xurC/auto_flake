@@ -1,0 +1,13 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+
+info/history.md
+*.log
+
+# Editor backups
+*#
+*~
+*.swp
+
+ info/project_data.json
