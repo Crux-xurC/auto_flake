@@ -110,4 +110,5 @@ Create `modules/utils/list_<mode>.py`:
 
 ## ⚖️ License
 
-This project is currently provided "as is". Please consider adding an MIT or Apache 2.0 license before public release.
+This project is licensed under the MIT License.
+See the LICENSE file for details.
