@@ -112,3 +112,8 @@ Create `modules/utils/list_<mode>.py`:
 
 This project is licensed under the MIT License.
 See the LICENSE file for details.
+
+## Status
+
+⚠️ This project is currently experimental (MVP).
+Expect breaking changes.
